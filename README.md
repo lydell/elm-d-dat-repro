@@ -58,7 +58,10 @@ How many times “file is locked” happened:
 
 (The numbers vary quite a bit between runs.)
 
-With the small project, 0.19.1 and 0.19.2 got 0/100 for `Outside.elm` with both `-N1` and `-N2`. With the big project and all cores, all three versions fail a few times per 150 runs.
+Extra notes:
+
+- With the small project, 0.19.1 and 0.19.2 got 0/100 for `Outside.elm` with both `-N1` and `-N2`. The bug exists in those versions as well, but happens much less frequently.
+- With the big project and all cores, _all three versions_ fail given enough tries. For example, `../repro.sh ../Outside.elm 200` failed one single time on Elm 0.19.3.
 
 ## What I think is going on
 
